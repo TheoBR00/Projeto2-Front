@@ -33,7 +33,7 @@ export default class Cards extends Component {
 
         console.log("CCCCCCCCCCCCC")
         console.log(this.state.cardset)
-        await axios.get('http://localhost:3000/api/cardset/',{params: this.state.cardset})
+        await axios.get('http://localhost:3000/api/cardset',{params: this.state.cardset})
             .then(resp=> {
                 if(Math.floor(resp.status/100) === 2) {
                     this.setState({lista:resp.data,
